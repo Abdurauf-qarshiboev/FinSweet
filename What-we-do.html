@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css">
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+            hamvisible: { max: "700px" },
+            // => @media (max-width: 768px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!--navbar  --> 
+    <section class="bg-white w-full mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Header -->
+    <section class="main-container mb-[96px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] sm:mb-[60px]">
+      <!-- top row -->
+      <article class="flex items-start gap-[110px] lg:gap-[50px] md:gap-8 sm:grid sm:grid-cols-1">
+        <!-- text -->
+        <div class="flex-1">
+          <!-- section title -->
+          <div
+            class="flex items-center gap-6 mb-8 sm:gap-4 md:mb-5 sm:mb-6 s:gap-[10px]"
+          >
+            <div
+              class="w-[72px] border-t-[2px] border-mainblack sm:w-1/5 xs:w-[50px] s:w-10"
+            ></div>
+            <div
+              class="mr-auto roboto-bold text-base text-mainblack leading-[19px] tracking-[2px] uppercase md:text-sm sm:text-xs s:text-[12px]"
+            >
+              What we do
+            </div>
+          </div>
+          <div class="ml-[97px] sm:ml-0">
+            <h1 class="text-mainblack mb-[34px] lg:text-[42px] lg:leading-[58px] md:text-[37px] md:leading-[48px] md:mb-5 sm:text-[34px] sm:leading-[42px] xs:text-[28px] xs:leading-[38px] s:text-2xl xs:mb-3">We are working worldwide</h1>
+            <!-- texts -->
+            <p class="text-pgray">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim in eros elementum tristique. Duis cursus,
+              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
+              libero vitae erat.
+            </p>
+          </div>
+        </div>
+        <!-- video -->
+        <div class="h-full overflow-hidden rounded-xl md:w-2/5 sm:w-4/5 sm:justify-self-center">
+          <img src="./img/what-we-do-img.png" alt="" class="" />
+        </div>
+      </article>
+    </section>
+
+    <!-- what we do (features)-->
+    <section class="bg-bggreen pt-[96px] pb-[104px] mb-[96px] lg:px-[96px] lg:py-[70px] md:px-0 xs:py-[50px] md:mb-[80px] sm:mb-[60px]">
+      <article class="main-container lg:max-w-[984px] md:max-w-[728px]">
+        <!-- text -->
+        <h2 class="text-mainblack mb-[64px] lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] md:mb-10 sm:text-[32px] sm:leading-[40px] xs:text-[23px] xs:leading-[38px] s:text-2xl xs:mb-9">What we do for the environment</h2>
+        <!-- functions -->
+        <div
+          class="grid grid-cols-3 grid-rows-2 gap-x-[64px] gap-y-[48px] grid-flow-row md:gap-x-8 md:gap-y-10 sm:grid-cols-2 xs:grid-cols-1 xs:gap-y-7"
+        >
+          <!-- function -->
+          <div class="flex items-start gap-6 md:gap-4 xs:gap-3">
+            <img src="./img/build.png" alt="build" class="mt-[1px] xs:size-6" />
+            <div class="space-y-2 xs:space-y-0">
+              <div class="roboto-bold text-2xl text-mainblack leading-[28px] md:text-lg md:leading-6 xs:text-base">
+                Build Healthy Cities
+              </div>
+              <p class="p-small text-mainblack/70">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-6 md:gap-4 xs:gap-3">
+            <img
+              src="./img/protectwater.png"
+              alt="protectwater"
+              class="mt-[1px] xs:size-6"
+            />
+            <div class="space-y-2 xs:space-y-0">
+              <div class="roboto-bold text-2xl text-mainblack leading-[28px] md:text-lg md:leading-6 xs:text-base">
+                Protect Land and Water
+              </div>
+              <p class="p-small text-mainblack/70">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-6 md:gap-4 xs:gap-3">
+            <img
+              src="./img/treeplantation.png"
+              alt="treeplantation"
+              class="mt-[1px] xs:size-6"
+            />
+            <div class="space-y-2 xs:space-y-0">
+              <div class="roboto-bold text-2xl text-mainblack leading-[28px] md:text-lg md:leading-6 xs:text-base">
+                Tree Plantation
+              </div>
+              <p class="p-small text-mainblack/70">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-6 md:gap-4 xs:gap-3">
+            <img
+              src="./img/watersus.png"
+              alt="water sustainability"
+              class="mt-[1px] xs:size-6"
+            />
+            <div class="space-y-2 xs:space-y-0">
+              <div class="roboto-bold text-2xl text-mainblack leading-[28px] md:text-lg md:leading-6 xs:text-base">
+                Water sustainability
+              </div>
+              <p class="p-small text-mainblack/70">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-6 md:gap-4 xs:gap-3">
+            <img
+              src="./img/animalsafety.png"
+              alt="Animal Safety"
+              class="mt-[1px] xs:size-6"
+            />
+            <div class="space-y-2 xs:space-y-0">
+              <div class="roboto-bold text-2xl text-mainblack leading-[28px] md:text-lg md:leading-6 xs:text-base">
+                Animal Safety
+              </div>
+              <p class="p-small text-mainblack/70">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-6 md:gap-4 xs:gap-3">
+            <img
+              src="./img/diversity.png"
+              alt="Biodiversity"
+              class="mt-[1px] xs:size-6"
+            />
+            <div class="space-y-2 xs:space-y-0">
+              <div class="roboto-bold text-2xl text-mainblack leading-[28px] md:text-lg md:leading-6 xs:text-base">
+                Biodiversity
+              </div>
+              <p class="p-small text-mainblack/70">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- projects we have done -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <!-- section title -->
+      <div
+        class="mb-4 text-center roboto-bold text-base text-mainblack leading-[19px] tracking-[2px] uppercase md:text-sm sm:text-xs md:mb-3"
+      >
+        Projects we have done
+      </div>
+      <!-- main text -->
+      <div class="w-full flex basis-1/2 mb-[54px] lg:text-[42px] sm:mb-10 xs:mb-8 ">
+        <h2 class="basis-1/2 text-mainblack ml-auto mr-auto text-center lg:basis-10/12 lg:text-[42px] lg:leading-[52px] md:text-[32px] md:leading-[42px] sm:text-[28px] xs:mx-0 md:basis-full xs:text-2xl">
+          We are creating a sustainable society, for everyone.
+        </h2>
+      </div>
+
+      <!-- 3 cards -->
+      <div class="flex gap-6 md:flex-col">
+
+        <!-- card 1 -->
+        <div
+          class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard1.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
+        >
+          <div
+            class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+          ></div>
+          <!-- card content -->
+          <div
+            class="absolute z-20 m-[48px] mt-[80px] lg:mt-[70px] md:flex md:flex-col xs:m-8 s:m-5 s:my-10"
+          >
+            <!-- texts -->
+            <div class="text-white">
+              <h3
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3 s:mb-[10px]"
+              >
+                Mission 40K: Tree plantation 
+              </h3>
+              <p
+                class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+            <!-- secondary button' see more' -->
+            <div class="md:grid  md:place-items-center">
+              <a href="./Project-and-more.html">
+                <button
+                  class="secondary-button mt-[64px] hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out md:mt-10 xs:mt-7"
+                >
+                  See more
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div
+          class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard2.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
+        >
+          <div
+            class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/80 w-full h-full z-1"
+          ></div>
+          <!-- card content -->
+          <div
+            class="absolute z-20 m-[48px] mt-[80px] lg:mt-[70px] md:flex md:flex-col xs:m-8 s:m-5 s:my-10"
+          >
+            <!-- texts -->
+            <div class="text-white">
+              <h3
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3  s:mb-[10px]"
+              >
+                Weekly cleanliness program in city
+              </h3>
+              <p
+                class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+            <!-- secondary button' see more' -->
+            <div class="md:grid  md:place-items-center">
+              <a href="./Project-and-more.html">
+                <button
+                  class="secondary-button mt-[64px] hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out md:mt-10 xs:mt-7"
+                >
+                  See more
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div
+          class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard3.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
+        >
+          <div
+            class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+          ></div>
+          <!-- card content -->
+          <div
+            class="absolute z-20 m-[48px] mt-[80px] lg:mt-[70px] md:flex md:flex-col xs:m-8 s:m-5 s:my-10"
+          >
+            <!-- texts -->
+            <div class="text-white">
+              <h3
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3  s:mb-[10px]"
+              >
+                Wildlife safety program 2021
+              </h3>
+              <p
+                class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+            <!-- secondary button' see more' -->
+            <div class="md:grid  md:place-items-center">
+              <a href="./Project-and-more.html">
+                <button
+                  class="secondary-button mt-[64px] hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out md:mt-10 xs:mt-7"
+                >
+                  See more
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- contribute -->
+    <section
+      class="main-container mb-[96px] pt-[93px] pb-[92px] px-[324px] flex items-center justify-center rounded-xl overflow-hidden bg-[url('./img/contribution.png')] bg-no-repeat bg-cover bg-center relative lg:px-[120px] lg:py-[70px] md:px-[100px] md:mb-[80px] sm:mb-[60px] sm:px-0 sm:py-[50px] xs:py-9 s:px-1"
+    >
+      <div
+        class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+      ></div>
+      <article class="z-10 flex flex-col items-center">
+        <h2
+          class="text-white text-center mb-8 lg:text-[38px] lg:leading-[42px] md:text-[32px] sm:text-2xl xs:text-[20px] xs:leading-[22px] xs:mb-6 s:text-lg  s:mb-[20px]"
+        >
+          You can contribute to make the environment greener!
+        </h2>
+        <div
+          class="flex items-center gap-8 ml-auto mr-auto sm:flex-col sm:gap-4 xs:gap-3"
+        >
+          <!-- primary button 'join as a volunteer' -->
+          <a
+            href="./Contact-us.html"
+            class="primary-button hover:bg-transparent hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out"
+            >Join as a volunteer</a
+          >
+          <!-- secondary button 'donate' -->
+          <a
+            href="./Donation.html"
+            class="secondary-button hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out sm:w-full"
+            >Donate</a
+          >
+        </div>
+      </article>
+    </section>
+
+    <!-- POP-UP window (form) -->
+    <section class="main-container mb-[96px]  lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:max-w-[728px sm:mb-[60px]">
+      <!-- Pop up message, which to be displayed on the screen (or whereever it is supposed to appear as soon as user reaches the bottom  -->
+      <article class=" w-[640px] relative p-[48px] bg-white text-mainblack rounded-lg ml-auto mr-auto md:px-0 sm:w-full sm:flex sm:flex-col xs:py-[55px]"> 
+          <div class="roboto-bold text-[40px] leading-[56px] mb-4 lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] md:text-center sm:text-3xl xs:text-[28px] s:text-2xl sm:mb-3 xs:mb-2">
+              Join as a volunteer
+          </div>
+          <p class="p-small text-pgray mb-8 sm:text-center xs:text-xs xs:mb-[48px]"> 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique. 
+          </p>
+
+          <button class="absolute top-6 right-6 size-8 bg-mainblack rounded grid place-items-center hover:scale-110 transition ease-in out sm:top-2 sm:right-2 sm:size-6 ">
+              <img src="./img/Cross.svg" alt="button" class="object-center object-cover">
+          </button>
+
+          <!-- form -->
+          <form action="submit" class="flex flex-wrap gap-8 select-text mb-8" autocomplete="off">
+              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
+                  <label for="firstname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">First Name</label> 
+                  <input type="text" name="firstname" id="firstname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
+                  <label for="lastname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Last Name</label> 
+                  <input type="text" name="lastname" id="lastname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col basis-full border-b-[1px] border-b-bordergray" >
+                  <label for="email" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Email Id</label> 
+                  <input type="email" name="email" id="email" class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col basis-full" >
+                  <label for="message" class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs ">Message</label> 
+                  <textarea name="message" id="message" class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 sm:text-sm 
+                  rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none" placeholder="Type your Messege"></textarea>
+              </div>
+          </form>
+
+          <!-- submit -->
+          <button type="submit" class="primary-button hover:bg-white hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out w-fit s:ml-auto s:mr-auto">
+              Send message
+          </button>
+          
+      </article>
+    </section>
+
+    <!-- read our news -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <!-- section title (big) -->
+        <div
+          class="flex items-center gap-6 mb-[48px] md:mb-8 sm:mb-[30px] xs:mb-6"
+        >
+          <div
+            class="roboto-bold text-[40px] text-mainblack leading-[60px] md:text-[37px] md:leading-[52px] sm:text-[28px] sm:leading-[38px] xs:text-[26px] xs:leading-[26px]"
+          >
+            Read Our News
+          </div>
+          <div class="flex-1 border-t-[1px] border-bordergray"></div>
+        </div>
+      <!-- news cards -->
+      <div class="flex gap-6 md:grid md:grid-cols-2 md:gap-y-8 xs:gap-x-4 xs:gap-y-8 xs:grid-cols-1">
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards1.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:mx-1"
+            >
+              Don’t destroy greenery and don’t spoil scenery
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:mx-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Blog-post-and-more.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards2.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1"
+            >
+              Is climate change happening faster than expected?
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards3.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1"
+            >
+              Top 10 facts about wind farms you didn't know
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards4.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1
+              xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1 "
+            >
+              Our goal is to make water available for everyone
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Our Events -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <article">
+        <!-- section title (big) -->
+        <div
+          class="flex items-center gap-6 mb-[48px] md:mb-8 sm:mb-[30px] xs:mb-6"
+        >
+          <div
+            class="roboto-bold text-[40px] text-mainblack leading-[60px] md:text-[37px] md:leading-[52px] sm:text-[28px] sm:leading-[38px] xs:text-[26px] xs:leading-[26px]"
+          >
+            Other events
+          </div>
+          <div class="flex-1 border-t-[1px] border-bordergray"></div>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="flex lg:flex-col lg:px-[60px] md:px-0 gap-6 s:gap-4">
+          <!-- 23 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                23
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Say no to plastic usage and save the planet
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">  <button
+              class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+            >
+              <img
+                src="./img/eventarrowright.svg"
+                alt="arrow"
+                class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+              />
+            </button> </a>
+          </div>
+          <!-- 25 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                25
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Weekly cleaning program
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">  <button
+              class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+            >
+              <img
+                src="./img/eventarrowright.svg"
+                alt="arrow"
+                class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+              />
+            </button> </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>

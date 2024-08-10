@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            current: { max: "1500px" },
+            // // => @media (max-width: 1500px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+            hamvisible: { max: "700px" },
+            // => @media (max-width: 700px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="h-screen">
+    <!--navbar  -->
+    <section class="bg-bggreen w-full">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- header -->
+    <section class="bg-bggreen mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <article
+        class="main-container py-[96px] pl-[244px] pr-[268px] text-mainblack space-y-[48px] lg:px-[120px] md:px-[60px] sm:px-0 sm:py-[50px] s:space-y-8"
+      >
+        <h1
+          class="md:text-center md:text-[48px] sm:text-[38px] sm:leading-[42px] xs:text-[32px] s:text-[27px]"
+        >
+          Say no to using plastic and save Earth
+        </h1>
+        <div
+          class="flex items-center gap-[48px] md:justify-evenly sm:gap-[12px] s:gap-5"
+        >
+          <div class="flex items-center gap-2">
+            <img src="./img/loc.svg" alt="loc" class="sm:size-[20px]" />
+            <a href="https://maps.app.goo.gl/crzKZDUsEC9H6ihz9">
+              <p
+                class="roboto-medium sm:text-[12px] sm:leading-[14px] s:text-[10px]"
+              >
+                8 Brewery Drive, Hudson, NH 03051, USA
+              </p>
+            </a>
+          </div>
+          <div class="flex items-center gap-2">
+            <img src="./img/date.svg" alt="date" class="sm:size-[20px]" />
+            <p
+              class="roboto-medium sm:text-[12px] sm:leading-[14px] s:text-[10px]"
+            >
+              September 3, 2021 8:30 AM
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- About section -->
+    <section
+      class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px] xs:mb-[40px]"
+    >
+      <article
+        class="pl-[244px] pr-[268px] text-pgray space-y-8 lg:px-[120px] md:px-[60px] sm:p-0 xs:space-y-6"
+      >
+        <h2
+          class="text-mainblack md:text-[40px] sm:text-[36px] xs:text-[26px] xs:leading-[26px]"
+        >
+          About
+        </h2>
+        <p>
+          Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in
+          in lorem platea mattis. Euismod aenean rhoncus scelerisque amet
+          tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien,
+          accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in
+          viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque
+          vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum
+          amet, nisi eu id.<br />
+          <br />
+          Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus
+          sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras
+          volutpat dui. A bibendum viverra eu cras.<br />
+          Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis elit
+          dignissim nibh sit. Donec arcu sed elit scelerisque tempor ornare
+          tristique. Integer faucibus duis praesent tempor feugiat ornare in.
+          Erat libero egestas porttitor nunc pellentesque mauris et pulvinar
+          eget. <br />
+        </p>
+        <!-- image -->
+        <div class="flex-1 w-full overflow-hidden rounded-xl">
+          <img
+            src="./img/about-img.png"
+            alt="image"
+            class="object-center object-cover w-full h-full"
+          />
+        </div>
+        <p>
+          Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in
+          in lorem platea mattis. Euismod aenean rhoncus scelerisque amet
+          tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien,
+          accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque in
+          viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque
+          vitae. Scelerisque eget accumsan, non in. Posuere magna erat bibendum
+          amet, nisi eu id.
+        </p>
+      </article>
+    </section>
+
+    <!-- Our Events -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <article class="pl-[244px] pr-[268px] lg:px-[120px] md:px-[60px] sm:px-0">
+        <!-- section title (big) -->
+        <div class="flex items-center gap-6 mb-[48px] sm:mb-[30px] xs:mb-6">
+          <div
+            class="roboto-bold text-[40px] text-mainblack leading-[60px] sm:text-[36px] sm:leading-[58px] xs:text-[26px] xs:leading-[26px]"
+          >
+            Other events
+          </div>
+          <div class="flex-1 border-t-[1px] border-bordergray"></div>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="flex flex-col gap-6 s:gap-4">
+          <!-- 23 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                23
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Say no to plastic usage and save the planet
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">
+              <button
+                class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+              >
+                <img
+                  src="./img/eventarrowright.svg"
+                  alt="arrow"
+                  class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+                />
+              </button>
+            </a>
+          </div>
+          <!-- 25 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                25
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Weekly cleaning program
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">
+              <button
+                class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+              >
+                <img
+                  src="./img/eventarrowright.svg"
+                  alt="arrow"
+                  class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+                />
+              </button>
+            </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>

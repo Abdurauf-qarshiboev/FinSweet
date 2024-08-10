@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+             hamvisible: { max: "700px" },
+            // => @media (max-width: 650px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!--navbar  -->
+    <section class="bg-white w-full mb-[96px] sm:mb-[70px] xs:mb-[50px]">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Post body-->
+    <section
+      class="main-container mb-[96px] lg:max-w-[984px] md:mb-[80px] sm:mb-[60px] xs:mb-[40px]"
+    >
+      <main class="flex-flex-col items-center text-pgray">
+        <!-- above the image -->
+        <article class="text-center px-[128px] mb-[48px] lg:px-0 sm:mb-[30px]">
+          <!-- section title -->
+          <div class="flex items-center mb-8 lg:mb-[1rem] s:mb-1">
+            <div
+              class="mr-auto ml-auto roboto-medium text-base text-mainblack leading-[26px] uppercase sm:text-[14px] sm:leading-[20px] s:text-[12px]"
+            >
+              21 DEC 2021
+            </div>
+          </div>
+          <!-- article title -->
+          <h1
+            class="text-mainblack text-center mb-4 w-[920px] md:w-[728px] sm:w-full md:text-center md:text-[44px] sm:text-[28px] sm:leading-[38px] xs:text-[25px] s:text-[21px] s:leading-8"
+          >
+            Is climate change happening faster than expected?
+          </h1>
+          <p class="sm:text-[12px] sm:leading-[20px]">
+            Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis
+            elit dignissim nibh sit.
+          </p>
+        </article>
+
+        <!-- image -->
+        <div class="flex-1 w-full overflow-hidden rounded-xl">
+          <img
+            src="./img/climate.jpg"
+            alt="image"
+            class="object-center object-cover w-full h-full"
+          />
+        </div>
+
+        <!-- below the image -->
+        <article
+          class="mt-[96px] px-[128px] space-y-8 lg:px-[50px] md:mt-[80px] sm:mt-[50px] sm:px-0 sm:space-y-6"
+        >
+          <h2 class="text-mainblack">
+            Mattis elit dignissim nibh sit. Donec arcu sed elit scelerisque
+          </h2>
+          <p>
+            Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in
+            in lorem platea mattis. Euismod aenean rhoncus scelerisque amet
+            tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien,
+            accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque
+            in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque
+            vitae. Scelerisque eget accumsan, non in. Posuere magna erat
+            bibendum amet, nisi eu id.<br />
+            <br />
+            Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus
+            sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras
+            volutpat dui. A bibendum viverra eu cras. <br />
+            Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis
+            elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor
+            ornare tristique. Integer faucibus duis praesent tempor feugiat
+            ornare in. Erat libero egestas porttitor nunc pellentesque mauris et
+            pulvinar eget. <br />
+            <br />
+            Consectetur feugiat quis hac enim nullam in enim. Tellus nisi
+            dapibus libero rutrum vitae nisl, cursus in sed. Egestas mi
+            ultricies et consectetur vel non. Augue enim enim, eget ut sit
+            purus, justo nisl pharetra. Tincidunt leo aenean dui, varius metus,
+            vel. Maecenas eu rhoncus, est nunc nisi volutpat, amet venenatis
+            faucibus. Enim, vel nunc purus feugiat purus tincidunt neque. Massa
+            ultricies faucibus pellentesque risus duis est.
+          </p>
+          <div>
+            <h3 class="text-mainblack mb-4">
+              Transform Your Idea Into Reality with Ether a Leading Digital
+              Agency
+            </h3>
+            <!-- bullet list-->
+            <ul
+              class="list-disc list-inside roboto-regular text-base text-pgray leading-[26px] xs:text-[14px] s:text-[12px]"
+            >
+              <li>Posuere sed pulvinar enim faucibus justo, cursus.</li>
+              <li>In diam facilisi at sit convallis blandit blandit in.</li>
+              <li>
+                Maecenas odio orci lectus urna ante consequat erat non morbi.
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-mainblack mb-4">
+              Transform Your Idea Into Reality with Ether a Leading Digital
+              Agency
+            </h3>
+            <p>
+              Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam
+              in in lorem platea mattis. Euismod aenean rhoncus scelerisque amet
+              tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien,
+              accumsan et id ut est. Posuere molestie in turpis quam.
+              Scelerisque in viverra mi ut quisque. In sollicitudin sapien, vel
+              nulla quisque vitae. Scelerisque eget accumsan, non in. Posuere
+              magna erat bibendum amet, nisi eu id.<br />
+              <br />
+              Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc,
+              lacus sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet,
+              cras volutpat dui. A bibendum viverra eu cras. <br />
+            </p>
+          </div>
+        </article>
+      </main>
+    </section>
+    r
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>

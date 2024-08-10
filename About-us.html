@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css">
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+            hamvisible: { max: "700px" },
+            // => @media (max-width: 650px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!--navbar  --> 
+    <section class="bg-white w-full mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- header -->
+    <section class="main-container mb-[96px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] sm:mb-[60px] s:mb-0">
+      <!-- section title -->
+          <div
+            class="flex items-center gap-6 mb-8 sm:gap-4 md:mb-5 sm:mb-6 s:gap-[10px]"
+          >
+            <div
+              class="w-[72px] border-t-[2px] border-mainblack sm:w-1/5 xs:w-[50px] s:w-10"
+            ></div>
+            <div
+              class="mr-auto roboto-bold text-base text-mainblack leading-[19px] tracking-[2px] uppercase md:text-sm sm:text-xs s:text-[12px]"
+            >
+              Know about us
+            </div>
+          </div>
+      <div class="flex items-start gap-[64px] ml-[96px] text-mainblack lg:gap-10 md:flex-col md:gap-4 sm:ml-0 ">
+        <h1 class="w-[624px] lg:text-[42px] lg:leading-[58px] lg:w-[452px] md:w-full md:text-[37px] md:leading-[48px] md:mb-5 sm:text-[32px] sm:leading-[42px] sm:mb-4 xs:text-[28px] xs:leading-[38px] s:text-2xl xs:mb-3">We are a nonprofit team working worldwide</h1>
+        <!-- side text -->
+        <div class="space-y-4 mt-4 flex-1 md:mt-0 md:mr-[70px] sm:mr-0 sm:space-y-2">
+          <h4 class="s:text-base">
+            Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc
+            ut sem vitae risus tristique posuere.
+          </h4>
+          <p class="text-mainblack/70 sm:text-sm s:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Suspendisse varius enim elementum tristique.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- video section -->
+    <section>
+      <!-- video -->
+      <article class="main-container w-full h-[448px] relative -mb-[224px] lg:max-w-[984px] md:max-w-[728px] sm:max-w-[385px] sm:h-[280px]
+      sm:-mb-[145px] xs:max-w-[335px] s:max-w-[280px]">
+        <video
+          class="w-full h-full rounded-xl overflow-hidden"
+          poster="./img/video-bg.png"
+        >
+          <source
+            src="./img/Avengers-Doomsday-Official-Trailer.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <!-- play video button -->
+        <button>
+          <img
+            src="./img/Play-icon-video.svg"
+            alt=""
+            class="z-10 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 hover:scale-105 transition duration-200 ease-in-out cursor-pointer sm:size-8"
+          />
+        </button>
+      </article>
+    </section>
+
+    <!-- OUR MISSSION section -->
+    <section class="bg-bggreen pt-[320px] pb-[96px] mb-[96px] lg:pt-[280px] md:mb-[80px] md:pb-[80px] md:pt-[210px] sm:mb-[60px] sm:pb-[60px] sm:pt-[140px]">
+      <!-- text row -->
+      <article
+        class="main-container flex gap-[96px] px-[96px] mb-[96px] text-mainblack lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:px-10 md:gap-[50px] sm:mb-[60px] sm:flex-col sm:px-0 "
+      >
+        <!-- OUR MISSSION -->
+        <div class="flex flex-1 flex-col items-start">
+          <div
+            class="roboto-bold text-base leading-[19px] tracking-[2px] mb-4 uppercase md:text-sm"
+          >
+            our mission
+          </div>
+          <h3 class="mb-2 md:text-[22px]">We make the world we save our own environment</h3>
+          <p class="text-mainblack/70 md:text-base s:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+            imperdiet. Nunc ut sem vitae risus tristique posuere.
+          </p>
+        </div>
+        <!-- OUR VISION -->
+        <div class="flex flex-1 flex-col items-start">
+          <div
+            class="roboto-bold text-base leading-[19px] tracking-[2px] mb-4 uppercase md:text-sm"
+          >
+            our Vision
+          </div>
+          <h3 class="mb-2 md:text-[22px]">
+            Plant more trees to make world air pollution free
+          </h3>
+          <p class="text-mainblack/70 md:text-base s:text-sm">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem
+            imperdiet. Nunc ut sem vitae risus tristique posuere.
+          </p>
+        </div>
+      </article>
+
+      <!-- bottom row logos -->
+      <article class="main-container lg:max-w-[984px] md:max-w-[728px]">
+        <!-- top border-->
+        <div class="flex items-center mb-[48px] md:mb-7">
+          <div
+            class="mr-auto roboto-medium text-base text-mainblack leading-[19px] tracking-[2px] uppercase md:text-sm"
+          >
+            our Supporters
+          </div>
+        </div>
+        <!-- partners -->
+        <div class="flex items-center flex-wrap justify-between md:justify-center md:gap-6 sm:grid sm:grid-cols-2 sm:ml-auto sm:mr-auto sm:gap-5">
+          <a href="#"><img src="./img/logoipsum.svg" alt="partner" class="sm:w-[110px]"/></a>
+          <a href="#"><img src="./img/logoipsum2.svg" alt="partner" class="sm:w-[110px]"/></a>
+          <a href="#"><img src="./img/logoipsum3.svg" alt="partner" class="sm:w-[110px]"/></a>
+          <a href="#"><img src="./img/logoipsum4.svg" alt="partner" class="sm:w-[110px]"/></a>
+          <a href="#"><img src="./img/logoipsum5.svg" alt="partner" class="sm:w-[110px]"/></a>
+          <a href="#"><img src="./img/logoipsum6.svg" alt="partner" class="sm:w-[110px]"/></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Awards section -->
+    <section class="main-container mb-[96px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] sm:mb-[60px]">
+      <article
+        class="flex flex-col gap-[48px] items-center px-[90px] text-mainblack sm:px-0 sm:gap-5"
+      >
+        <h2 class="lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] sm:text-[32px] sm:leading-[40px] xs:text-[23px] xs:leading-[38px] xs:mb-9 s:text-2xl s:mb-0">Awards & Recognitions</h2>
+        <div class="flex w-full items-center justify-between">
+          <a href="#"><img src="./img/Award1.svg" alt="award" class="sm:scale-75"/></a>
+          <a href="#"><img src="./img/Award2.svg" alt="award" class="sm:scale-75"/></a>
+          <a href="#"><img src="./img/Award3.svg" alt="award" class="sm:scale-75"/></a>
+          <a href="#"><img src="./img/Award4.svg" alt="award" class="sm:scale-75"/></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Our Journey section -->
+    <section
+      class="main-container flex gap-[48px] items-center bg-bgblack rounded-xl mb-[96px] py-[64px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:py-[50px] sm:mb-[60px] sm:flex-col sm:p-8 s:p-5 "
+    >
+      <article class="flex flex-1 flex-col items-start text-white ml-[96px] lg:ml-[70px] md:ml-[50px] sm:ml-0">
+        <!-- texts -->
+        <div class="flex flex-1 flex-col items-start mb-8">
+          <div
+            class="roboto-bold text-base leading-[19px] tracking-[2px] mb-4 uppercase md:text-sm s:text-xs"
+          >
+            OUR JOURNEY
+          </div>
+          <h2 class="mb-4 lg:text-[40px] lg:leading-[48px] md:text-[26px] md:leading-[42px] md:mb-3 sm:text-[22px] sm:leading-[40px] xs:text-lg xs:leading-[38px] s:text-2xl xs:mb-9 s:mb-5">How we raised 34M</h2>
+          <p class="text-white/60 md:text-[13px]">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros elementum tristique. Duis cursus, mi quis
+            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+            vitae erat. Aenean faucibus nibh.
+          </p>
+        </div>
+        <!-- stats row -->
+        <div class="flex items-center gap-8 roboto-medium md:gap-6 sm:w-full sm:justify-evenly xs:gap-5 s:items-start s:gap-10">
+          <div>
+            <div class="text-2xl leading-[38px] xs:text-lg">34M+</div>
+            <div class="text-xs leading-[19px] opacity-60 s:text-[11px] s:leading-[14px]">
+              Donation Received
+            </div>
+          </div>
+          <div>
+            <div class="text-2xl leading-[38px]  xs:text-lg">400+</div>
+            <div class="text-xs leading-[19px] opacity-60 s:text-[11px] s:leading-[14px]">Volunters</div>
+          </div>
+          <div>
+            <div class="text-2xl leading-[38px]  xs:text-lg">40K+</div>
+            <div class="text-xs leading-[19px] opacity-60 s:text-[11px] s:leading-[14px]">Trees planted</div>
+          </div>
+        </div>
+      </article>
+      <article class="rounded-l-xl overflow-hidden md:basis-[45%] sm:rounded-xl">
+        <img src="./img/ourjourney.png" alt="us" class="w-full h-auto" />
+      </article>
+    </section>
+
+    <!-- Meet our team -->
+    <section id="ourteam" class="flex flex-col items-center main-container mb-[96px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] sm:mb-[60px]">
+      <div class="space-y-4 mb-[48px] w-[519px] sm:max-w-fit">
+        <h2 class="text-mainblack text-center lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] sm:text-[32px] sm:leading-[40px] xs:text-[23px] xs:leading-[38px] s:text-2xl xs:mb-0">Meet our team</h2>
+        <p class="text-pgray/60 text-center sm:text-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique.
+        </p>
+      </div>
+      <!-- team members` info cards -->
+      <article
+        class="grid grid-cols-4 grid-rows-2 grid-flow-col gap-y-[48px] gap-x-[32px] md:grid-cols-3 md:grid-rows-3 
+        sm:grid-cols-2 sm:grid-rows-4"
+      >
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/leonard.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:text-center s:leading-5"> Leonard John Davies</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3  s:text-[11px] s:mb-2"
+              >Cofounder, CEO</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div> 
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/freddy.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5"> Freddy Busby</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Project Manager</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/francis.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5">Francis Weber</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Vice Chairman</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/dale.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5">Dale Banks</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Accountatnt, Finance</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/kyla.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5">Kyla Obrien</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Head of Authority</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/miriam.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5"> Miriam Middleton</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Cofounder, CEO</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/adrian.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5"> Adrian Dixon</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Support Executive</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4 ">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+        <!-- member -->
+        <div
+          class="flex flex-col items-center gap-4 text-mainblack roboto-medium md:gap-3 s:gap-2"
+        >
+          <!-- picture -->
+          <a href="#" class="rounded-lg overflow-hidden">
+            <img
+              src="./img/ellen.png"
+              alt=""
+              class="object-cover object-center"
+            />
+          </a>
+          <!-- info -->
+          <div class="flex flex-col items-center colorhover">
+            <a href="#" class="mb-2 text-xl text-center leading-8 md:mb-1 sm:text-base s:leading-5"> Ellen Walton</a>
+            <a href="#" class="text-xs leading-[19px] opacity-60 mb-4 md:text-sm md:mb-3 s:text-[11px] s:mb-2"
+              >Vice Chairman</a
+            >
+            <div class="flex items-center gap-[20px] opacity-80 s:gap-4">
+              <a
+                href="#"
+                class="bg-white rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Facebook/Negative.svg"
+                  alt="facebook"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/Twitter/Negative.svg"
+                  alt="Twitter"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+              <a
+                href="#"
+                class="bg-white rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group
+                 s:size-4"
+                ><img
+                  src="./img/LinkedIn/Negative.svg"
+                  alt="LinkedIn"
+                  class="group-hover:brightness-0 group-hover:invert"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- contribute -->
+    <section 
+      class="main-container mb-[96px] pt-[93px] pb-[92px] px-[324px] flex items-center justify-center rounded-xl overflow-hidden bg-[url('./img/contribution.png')] bg-no-repeat bg-cover bg-center relative lg:px-[120px] lg:py-[70px] md:px-[100px] md:mb-[80px] sm:mb-[60px] sm:px-0 sm:py-[50px] xs:py-9 s:px-1"
+    >
+      <div
+        class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+      ></div>
+      <article class="z-10 flex flex-col items-center">
+        <h2
+          class="text-white text-center mb-8 lg:text-[38px] lg:leading-[42px] md:text-[32px] sm:text-2xl xs:text-[20px] xs:leading-[22px] xs:mb-6 s:text-lg  s:mb-[20px]"
+        >
+          You can contribute to make the environment greener!
+        </h2>
+        <div
+          class="flex items-center gap-8 ml-auto mr-auto sm:flex-col sm:gap-4 xs:gap-3"
+        >
+          <!-- primary button 'join as a volunteer' -->
+          <a
+            href="./Contact-us.html"
+            class="primary-button hover:bg-transparent hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out"
+            >Join as a volunteer</a
+          >
+          <!-- secondary button 'donate' -->
+          <a
+            href="./Donation.html"
+            class="secondary-button hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out sm:w-full"
+            >Donate</a
+          >
+        </div>
+      </article>
+    </section>
+
+    <!-- POP-UP window (form) -->
+    <section class="main-container mb-[96px]  lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:max-w-[728px sm:mb-[60px]">
+      <!-- Pop up message, which to be displayed on the screen (or whereever it is supposed to appear as soon as user reaches the bottom  -->
+      <article class=" w-[640px] relative p-[48px] bg-white text-mainblack rounded-lg ml-auto mr-auto md:px-0 sm:w-full sm:flex sm:flex-col xs:py-[55px]"> 
+          <div class="roboto-bold text-[40px] leading-[56px] mb-4 lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] md:text-center sm:text-3xl xs:text-[28px] s:text-2xl sm:mb-3 xs:mb-2">
+              Join as a volunteer
+          </div>
+          <p class="p-small text-pgray mb-8 sm:text-center xs:text-xs xs:mb-[48px]"> 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique. 
+          </p>
+
+          <button class="absolute top-6 right-6 size-8 bg-mainblack rounded grid place-items-center hover:scale-110 transition ease-in out sm:top-2 sm:right-2 sm:size-6 ">
+              <img src="./img/Cross.svg" alt="button" class="object-center object-cover">
+          </button>
+
+          <!-- form -->
+          <form action="submit" class="flex flex-wrap gap-8 select-text mb-8" autocomplete="off">
+              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
+                  <label for="firstname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">First Name</label> 
+                  <input type="text" name="firstname" id="firstname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
+                  <label for="lastname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Last Name</label> 
+                  <input type="text" name="lastname" id="lastname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col basis-full border-b-[1px] border-b-bordergray" >
+                  <label for="email" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Email Id</label> 
+                  <input type="email" name="email" id="email" class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col basis-full" >
+                  <label for="message" class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs ">Message</label> 
+                  <textarea name="message" id="message" class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 sm:text-sm 
+                  rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none" placeholder="Type your Messege"></textarea>
+              </div>
+          </form>
+
+          <!-- submit -->
+          <button type="submit" class="primary-button hover:bg-white hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out w-fit s:ml-auto s:mr-auto">
+              Send message
+          </button>
+          
+      </article>
+    </section>
+
+    <!-- read our news section -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <!-- section title (big) -->
+        <div
+          class="flex items-center gap-6 mb-[48px] md:mb-8 sm:mb-[30px] xs:mb-6"
+        >
+          <div
+            class="roboto-bold text-[40px] text-mainblack leading-[60px] md:text-[37px] md:leading-[52px] sm:text-[28px] sm:leading-[38px] xs:text-[26px] xs:leading-[26px]"
+          >
+            Read Our News
+          </div>
+          <div class="flex-1 border-t-[1px] border-bordergray"></div>
+        </div>
+      <!-- news cards -->
+      <div class="flex gap-6 md:grid md:grid-cols-2 md:gap-y-8 xs:gap-x-4 xs:gap-y-8 xs:grid-cols-1">
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards1.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:mx-1"
+            >
+              Don’t destroy greenery and don’t spoil scenery
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:mx-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Blog-post-and-more.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards2.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1"
+            >
+              Is climate change happening faster than expected?
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards3.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1"
+            >
+              Top 10 facts about wind farms you didn't know
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards4.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1
+              xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1 "
+            >
+              Our goal is to make water available for everyone
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Our Events -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <article">
+        <!-- section title (big) -->
+        <div
+          class="flex items-center gap-6 mb-[48px] md:mb-8 sm:mb-[30px] xs:mb-6"
+        >
+          <div
+            class="roboto-bold text-[40px] text-mainblack leading-[60px] md:text-[37px] md:leading-[52px] sm:text-[28px] sm:leading-[38px] xs:text-[26px] xs:leading-[26px]"
+          >
+            Other events
+          </div>
+          <div class="flex-1 border-t-[1px] border-bordergray"></div>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="flex lg:flex-col lg:px-[60px] md:px-0 gap-6 s:gap-4">
+          <!-- 23 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                23
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Say no to plastic usage and save the planet
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">  <button
+              class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+            >
+              <img
+                src="./img/eventarrowright.svg"
+                alt="arrow"
+                class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+              />
+            </button> </a>
+          </div>
+          <!-- 25 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                25
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Weekly cleaning program
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">  <button
+              class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+            >
+              <img
+                src="./img/eventarrowright.svg"
+                alt="arrow"
+                class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+              />
+            </button> </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>

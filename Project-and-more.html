@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+            hamvisible: { max: "700px" },
+            // => @media (max-width: 650px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!--navbar  -->
+    <section class="bg-white w-full mb-[96px] sm:mb-[70px] xs:mb-[50px]">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Post body-->
+    <section
+      id="postbody"
+      class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px] xs:mb-[40px]"
+    >
+      <article
+        class="text-pgray pl-[128px] pr-[224px] lg:pl-[100px] lg:pr-[170px] md:px-0 md:pr-[70px] sm:p-0"
+      >
+        <!-- section title -->
+        <div class="flex items-center gap-6 mb-8 sm:gap-4 sm:mb-6 s:gap-[10px]">
+          <div
+            class="w-[72px] border-t-[2px] border-mainblack xs:w-[50px] s:w-10"
+          ></div>
+          <div
+            class="mr-auto roboto-bold text-base text-mainblack leading-[19px] tracking-[2px] uppercase md:text-sm sm:text-xs s:text-[12px]"
+          >
+            Our project
+          </div>
+        </div>
+        <div class="ml-[96px] flex flex-col lg:ml-[70px] sm:ml-0">
+          <!-- article title -->
+          <h1
+            class="text-mainblack mb-8 md:text-[46px] sm:text-[38px] sm:leading-[56px] xs:text-[32px] xs:leading-[44px] s:text-2xl"
+          >
+            Weekly cleanliness program in city
+          </h1>
+          <!-- texts -->
+          <p class="mb-8">
+            Et morbi vitae lobortis nam odio. Faucibus vitae vel neque nullam in
+            in lorem platea mattis. Euismod aenean rhoncus scelerisque amet
+            tincidunt scelerisque aliquam. Luctus porttitor elit vel sapien,
+            accumsan et id ut est. Posuere molestie in turpis quam. Scelerisque
+            in viverra mi ut quisque. In sollicitudin sapien, vel nulla quisque
+            vitae. Scelerisque eget accumsan, non in. Posuere magna erat
+            bibendum amet, nisi eu id.<br />
+            <br />
+            Viverra at diam nunc non ornare. Sed ultricies pulvinar nunc, lacus
+            sem. Tellus aliquam ut euismod cursus dui lectus. Ut amet, cras
+            volutpat dui. A bibendum viverra eu cras. <br />
+            Mauris morbi sed dignissim a in nec aliquam fringilla et. Mattis
+            elit dignissim nibh sit. Donec arcu sed elit scelerisque tempor
+            ornare tristique. Integer faucibus duis praesent tempor feugiat
+            ornare in. Erat libero egestas porttitor nunc pellentesque mauris et
+            pulvinar eget. <br />
+            <br />
+            Consectetur feugiat quis hac enim nullam in enim. Tellus nisi
+            dapibus libero rutrum vitae nisl, cursus in sed. Egestas mi
+            ultricies et consectetur vel non. Augue enim enim, eget ut sit
+            purus, justo nisl pharetra. Tincidunt leo aenean dui, varius metus,
+            vel. Maecenas eu rhoncus, est nunc nisi volutpat, amet venenatis
+            faucibus. Enim, vel nunc purus feugiat purus tincidunt neque. Massa
+            ultricies faucibus pellentesque risus duis est.
+          </p>
+          <!-- image -->
+          <div class="flex-1 w-full overflow-hidden rounded-xl mb-[48px]">
+            <img
+              src="./img/blog-image.jpg"
+              alt="image"
+              class="object-center object-cover w-full h-full"
+            />
+          </div>
+          <!-- cool heading -->
+          <div class="space-y-4">
+            <h2 class="text-mainblack xs:text-[20px]">Some cool heading</h2>
+            <!-- text -->
+            <p>
+              Posuere sed pulvinar enim faucibus justo, cursus. In diam facilisi
+              at sit convallis blandit blandit in. Maecenas odio orci lectus
+              urna ante consequat erat non morbi. Rhoncus ullamcorper dictum sit
+              non semper sit tellus adipiscing. Est sapien rhoncus sit
+              vestibulum sollicitudin. Tellus urna malesuada eu id tempus lorem.
+              Est aliquam sem bibendum felis interdum pharetra. Diam fermentum
+              in lectus morbi at eget sit et quisque. Semper commodo viverra
+              donec magna egestas nibh. Condimentum pellentesque auctor ornare
+              at at tellus nunc cras eu. Velit dignissim penatibus faucibus
+              tempus. Arcu pharetra morbi bibendum et dolor volutpat amet. Sed
+              mauris amet mi sed purus vitae odio. Mi eu lectus suscipit
+              sagittis, ultrices ut dui.
+            </p>
+            <!-- bullet list-->
+            <ul
+              class="list-disc list-inside roboto-bold text-base text-mainblack leading-[26px] xs:text-[14px] s:text-[12px]"
+            >
+              <li>Posuere sed pulvinar enim faucibus justo, cursus.</li>
+              <li>In diam facilisi at sit convallis blandit blandit in.</li>
+              <li>
+                Maecenas odio orci lectus urna ante consequat erat non morbi.
+              </li>
+            </ul>
+
+            <p>
+              Posuere sed pulvinar enim faucibus justo, cursus. In diam facilisi
+              at sit convallis blandit blandit in. Maecenas odio orci lectus
+              urna ante consequat erat non morbi.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- features section -->
+    <section
+      class="bg-bgviolet mb-[96px] md:mb-[80px] sm:mb-[60px] xs:mb-[40px]"
+    >
+      <article
+        class="main-container py-[96px] px-[128px] lg:px-[100px] lg:py-[70px] md:px-0 xs:py-[50px]"
+      >
+        <!-- functions -->
+        <div
+          class="grid grid-cols-2 grid-rows-2 gap-[48px] grid-flow-row sm:grid-cols-1"
+        >
+          <!-- function -->
+          <div class="flex items-start gap-5 s:gap-3">
+            <img
+              src="./img/Iconly/Bulk/Edit Square.svg"
+              alt="icon"
+              class="s:size-6"
+            />
+            <div class="space-y-2 s:space-y-1">
+              <div
+                class="roboto-bold text-2xl text-mainblack leading-[38px] md:text-[20px] md:leading-6 s:text-base"
+              >
+                200+ Plantation in 1 week
+              </div>
+              <p class="text-pgray text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-5 s:gap-3">
+            <img
+              src="./img/Iconly/Bulk/Category.svg"
+              alt="icon"
+              class="s:size-6"
+            />
+            <div class="space-y-2 s:space-y-1">
+              <div
+                class="roboto-bold text-2xl text-mainblack leading-[38px] md:text-[20px] md:leading-6 s:text-base"
+              >
+                230 People Have donated
+              </div>
+              <p class="text-pgray text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-5 s:gap-3">
+            <img
+              src="./img/Iconly/Bulk/Image.svg"
+              alt="icon"
+              class="s:size-6"
+            />
+            <div class="space-y-2 s:space-y-1">
+              <div
+                class="roboto-bold text-2xl text-mainblack leading-[38px] md:text-[20px] md:leading-6 s:text-base"
+              >
+                30+ people joined
+              </div>
+              <p class="text-pgray text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+          <!-- function -->
+          <div class="flex items-start gap-5 s:gap-3">
+            <img
+              src="./img/Iconly/Bulk/Discovery.svg"
+              alt="icon"
+              class="s:size-6"
+            />
+            <div class="space-y-2 s:space-y-1">
+              <div
+                class="roboto-bold text-2xl text-mainblack leading-[38px] md:text-[20px] md:leading-6 s:text-base"
+              >
+                $324 Raised for this initiate
+              </div>
+              <p class="text-pgray text-left">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros elementum tristique.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- projects we have done -->
+    <section id="ourprojects"
+      class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px] xs:mb-[40px]"
+    >
+      <!-- 3 cards -->
+      <div class="flex gap-6 md:flex-col">
+
+        <!-- card 1 -->
+        <div
+          class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard1.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
+        >
+          <div
+            class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+          ></div>
+          <!-- card content -->
+          <div
+            class="absolute z-20 m-[48px] mt-[80px] lg:mt-[70px] md:flex md:flex-col xs:m-8 s:m-5 s:my-10"
+          >
+            <!-- texts -->
+            <div class="text-white">
+              <h3
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3 s:mb-[10px]"
+              >
+                Mission 40K: Tree plantation 
+              </h3>
+              <p
+                class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+            <!-- secondary button' see more' -->
+            <div class="md:grid md:place-items-center">
+              <a href="./Project-and-more.html">
+                <button
+                  class="secondary-button mt-[64px] hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out md:mt-10 xs:mt-7"
+                >
+                  See more
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 2 -->
+        <div
+          class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard2.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
+        >
+          <div
+            class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/80 w-full h-full z-1"
+          ></div>
+          <!-- card content -->
+          <div
+            class="absolute z-20 m-[48px] mt-[80px] lg:mt-[70px] md:flex md:flex-col xs:m-8 s:m-5 s:my-10"
+          >
+            <!-- texts -->
+            <div class="text-white">
+              <h3
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3 s:mb-[10px]"
+              >
+                Weekly cleanliness program in city
+              </h3>
+              <p
+                class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+            <!-- secondary button' see more' -->
+            <div class="md:grid md:place-items-center">
+              <a href="./Project-and-more.html">
+                <button
+                  class="secondary-button mt-[64px] hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out md:mt-10 xs:mt-7"
+                >
+                  See more
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- card 3 -->
+        <div
+          class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard3.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
+        >
+          <div
+            class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+          ></div>
+          <!-- card content -->
+          <div
+            class="absolute z-20 m-[48px] mt-[80px] lg:mt-[70px] md:flex md:flex-col xs:m-8 s:m-5 s:my-10"
+          >
+            <!-- texts -->
+            <div class="text-white">
+              <h3
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3  s:mb-[10px]"
+              >
+                Wildlife safety program 2021
+              </h3>
+              <p
+                class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+            </div>
+            <!-- secondary button' see more' -->
+            <div class="md:grid md:place-items-center">
+              <a href="./Project-and-more.html">
+                <button
+                  class="secondary-button mt-[64px] hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out md:mt-10 xs:mt-7"
+                >
+                  See more
+                </button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- contribute -->
+    <section
+      class="main-container mb-[96px] pt-[93px] pb-[92px] px-[324px] flex items-center justify-center rounded-xl overflow-hidden bg-[url('./img/contribution.png')] bg-no-repeat bg-cover bg-center relative lg:px-[120px] lg:py-[70px] md:px-[100px] md:mb-[80px] sm:mb-[60px] sm:px-0 sm:py-[50px] xs:py-9 s:px-1"
+    >
+      <div
+        class="absolute top-0 right-0 left-0 bottom-0 bg-[#0B0706]/50 w-full h-full z-1"
+      ></div>
+      <article class="z-10 flex flex-col items-center">
+        <h2
+          class="text-white text-center mb-8 lg:text-[38px] lg:leading-[42px] md:text-[32px] sm:text-2xl xs:text-[20px] xs:leading-[22px] xs:mb-6 s:text-xl  s:mb-[20px]"
+        >
+          You can contribute to make the environment greener!
+        </h2>
+        <div
+          class="flex items-center gap-8 ml-auto mr-auto sm:flex-col sm:gap-4 xs:gap-3"
+        >
+          <!-- primary button 'join as a volunteer' -->
+          <a
+            href="./Contact-us.html"
+            class="primary-button hover:bg-transparent hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out"
+            >Join as a volunteer</a
+          >
+          <!-- secondary button 'donate' -->
+          <a
+            href="./Donation.html"
+            class="secondary-button hover:bg-transparent hover:text-white hover:ring-1 hover:ring-inset hover:ring-white hover:scale-105 transition duration-300 ease-in-out sm:w-full"
+            >Donate</a
+          >
+        </div>
+      </article>
+    </section>
+
+    <!-- POP-UP window (form) -->
+    <section class="main-container mb-[96px]  lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:max-w-[728px sm:mb-[60px]">
+      <!-- Pop up message, which to be displayed on the screen (or whereever it is supposed to appear as soon as user reaches the bottom  -->
+      <article class=" w-[640px] relative p-[48px] bg-white text-mainblack rounded-lg ml-auto mr-auto md:px-0 sm:w-full sm:flex sm:flex-col xs:py-[55px]"> 
+          <div class="roboto-bold text-[40px] leading-[56px] mb-4 lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] md:text-center sm:text-3xl xs:text-[28px] s:text-2xl sm:mb-3 xs:mb-2">
+              Join as a volunteer
+          </div>
+          <p class="p-small text-pgray mb-8 sm:text-center xs:text-xs xs:mb-[48px]"> 
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique. 
+          </p>
+
+          <button class="absolute top-6 right-6 size-8 bg-mainblack rounded grid place-items-center hover:scale-110 transition ease-in out sm:top-2 sm:right-2 sm:size-6 ">
+              <img src="./img/Cross.svg" alt="button" class="object-center object-cover">
+          </button>
+
+          <!-- form -->
+          <form action="submit" class="flex flex-wrap gap-8 select-text mb-8" autocomplete="off">
+              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
+                  <label for="firstname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">First Name</label> 
+                  <input type="text" name="firstname" id="firstname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
+                  <label for="lastname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Last Name</label> 
+                  <input type="text" name="lastname" id="lastname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col basis-full border-b-[1px] border-b-bordergray" >
+                  <label for="email" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Email Id</label> 
+                  <input type="email" name="email" id="email" class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
+              </div>
+              <div class="flex flex-col basis-full" >
+                  <label for="message" class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs ">Message</label> 
+                  <textarea name="message" id="message" class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 sm:text-sm 
+                  rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none" placeholder="Type your Messege"></textarea>
+              </div>
+          </form>
+
+          <!-- submit -->
+          <button type="submit" class="primary-button hover:bg-white hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out w-fit s:ml-auto s:mr-auto">
+              Send message
+          </button>
+          
+      </article>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>

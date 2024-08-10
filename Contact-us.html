@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+             hamvisible: { max: "700px" },
+            // => @media (max-width: 650px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!--navbar  -->
+    <section class="bg-bgviolet w-full">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm bg-gradient-to-r from-bgviolet to-bgviolet opacity-100"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Header -->
+    <section
+      class="bg-bgviolet mb-[96px] py-[96px] md:mb-[80px] md:py-[80px] sm:mb-[60px] sm:py-[60px] xs:py-[40px]"
+    >
+      <main
+        class="main-container flex items-start gap-[96px] lg:max-w-[984px] md:max-w-[728px] md:flex-col md:gap-10 md:items-center"
+      >
+        <!-- top row -->
+        <article class="basis-1/2">
+          <!-- section title -->
+          <div
+            class="flex items-center gap-6 mb-8 sm:gap-4 sm:mb-6 s:gap-[10px]"
+          >
+            <div
+              class="w-[72px] border-t-[2px] border-mainblack sm:w-1/5 xs:w-[50px] s:w-10"
+            ></div>
+            <div
+              class="mr-auto roboto-bold text-base text-mainblack leading-[19px] tracking-[2px] uppercase sm:text-xs s:text-[12px]"
+            >
+              Contact us
+            </div>
+          </div>
+          <!-- texts -->
+          <div class="ml-[96px] md:mr-[96px] sm:mx-0">
+            <!-- texts -->
+            <h1
+              class="text-mainblack mb-4 lg:text-[51px] md:text-[37px] md:leading-[52px] md:text-center sm:text-[28px] sm:leading-[42px] xs:text-[32px] xs:leading-[44px] s:text-2xl"
+            >
+              We'd love to hear from you
+            </h1>
+            <p class="text-mainblack/70 md:text-center sm:text-base">
+              Have any question in mind or want to enquire? Please feel free to
+              contact us through the form or the following details.
+            </p>
+          </div>
+        </article>
+        <!-- side list -->
+        <aside
+          class="flex flex-col items-start gap-8 basis-1/2 text-mainblack lg:gap-5 md:mx-[96px] md:items-center sm:mx-0"
+        >
+          <!-- side card -->
+          <div class="space-y-[10px] pb-4 border-b-[1px] border-b-bordergray">
+            <div
+              class="roboto-bold text-2xl leading-[38px] md:text-lg md:text-center sm:text-lg"
+            >
+              Let's talk!
+            </div>
+            <div class="flex items-center gap-8 sm:text-sm">
+              <a href="tel:+1-23-456-789" class="leading-7">+1 23 456 789</a>
+              <a href="mailto:hello@finsweet.com">hello@finsweet.com</a>
+            </div>
+          </div>
+          <!-- side card -->
+          <div class="space-y-2">
+            <div
+              class="roboto-bold text-2xl leading-8 md:text-lg md:text-center sm:text-lg"
+            >
+              Headoffice
+            </div>
+            <div class="text-pgray">
+              <a href="https://maps.app.goo.gl/crzKZDUsEC9H6ihz9">
+                <p class="sm:text-sm">
+                  8 Brewery Drive, Hudson, NH 03051<span
+                    class="hidden sm:inline"
+                    >,
+                  </span>
+                  <br class="sm:hidden" />
+                  USA
+                </p>
+              </a>
+            </div>
+          </div>
+          <!-- side card -->
+          <div class="space-y-2">
+            <div
+              class="roboto-bold text-2xl leading-8 md:text-lg md:text-center sm:text-lg"
+            >
+              Branch Office
+            </div>
+            <div class="text-pgray">
+              <a
+                href="https://maps.app.goo.gl/jh2axUY5tFdzg2Ja9"
+                class="leading-7"
+              >
+                <p>
+                  178 Marconi St., Venice, 34293<span class="hidden sm:inline"
+                    >,
+                  </span>
+                  <br class="sm:hidden" />
+                  Italy
+                </p>
+              </a>
+            </div>
+          </div>
+          <!-- socials -->
+          <div class="flex items-center gap-[20px] opacity-80">
+            <a
+              href="#"
+              class="bg-transparent rounded-full hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group"
+              ><img
+                src="./img/Facebook/Negative.svg"
+                alt="facebook"
+                class="group-hover:brightness-0 group-hover:invert"
+            /></a>
+            <a
+              href="#"
+              class="bg-transparent rounded hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group"
+              ><img
+                src="./img/Twitter/Negative.svg"
+                alt="Twitter"
+                class="group-hover:brightness-0 group-hover:invert"
+            /></a>
+            <a
+              href="#"
+              class="bg-transparent rounded-[1px] hover:ring-1 hover:ring-mainblack hover:bg-mainblack hover:scale-110 transition ease-in-out group"
+              ><img
+                src="./img/LinkedIn/Negative.svg"
+                alt="LinkedIn"
+                class="group-hover:brightness-0 group-hover:invert"
+            /></a>
+          </div>
+        </aside>
+      </main>
+    </section>
+
+    <!-- form section -->
+    <section
+      class="main-container max-w-[768px] flex flex-col items-center text-mainblack mb-[96px] md:max-w-[728px] md:px-10 md:mb-[80px] sm:mb-[60px] s:px-0"
+    >
+      <!-- form -->
+      <form
+        action="submit"
+        class="w-full grid grid-cols-2 gap-8 select-text mb-8 sm:flex sm:flex-col"
+        autocomplete="off">
+          <div class="flex flex-col border-b-[1px] border-b-bordergray">
+            <label
+              for="firstname"
+              class="roboto-bold text-mainblack/60 leading-[19px] text-xs"
+              >First Name</label
+            >
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              value="John"
+              class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+            />
+          </div>
+          <div class="flex flex-col border-b-[1px] border-b-bordergray">
+            <label
+              for="lastname"
+              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              value="Doe"
+              class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+            />
+          </div>
+          <div class="flex flex-col border-b-[1px] border-b-bordergray">
+            <label
+              for="email"
+              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+              >Email Id</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              value="johndoe@gmail.com"
+              class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+            />
+          </div>
+          <div class="flex flex-col border-b-[1px] border-b-bordergray">
+            <label
+              for="subject"
+              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+              >Subject</label
+            >
+            <input
+              type="email"
+              name="subject"
+              id="subject"
+              class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+            />
+          </div>
+          <div class="flex flex-col col-span-2">
+            <label
+              for="message"
+              class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs"
+              >Message</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none"
+              placeholder="Type your Messege"
+            ></textarea>
+          </div>
+      </form>
+      <!-- submit -->
+      <button
+        type="submit"
+        class="primary-button hover:bg-white hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out"
+      >
+        Send message
+      </button>
+    </section>
+
+    <!-- google maps -->
+    <section class="w-full h-[448px] md:h-[340px] sm:h-[250px]">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1971.9554396734445!2d-86.06441407421318!3d39.796532750811124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1722886450968!5m2!1sen!2s"
+        width="100%"
+        height="100%"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>

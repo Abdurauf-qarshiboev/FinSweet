@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <title>finsweet</title>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            // 'xl': {'max': '1500px'},
+            // // => @media (max-width: 1535px) { ... }
+
+            lg: { max: "1024px" },
+            // => @media (max-width: 1024px) { ... }
+
+            md: { max: "768px" },
+            // => @media (max-width: 768px) { ... }
+
+            hamvisible: { max: "700px" },
+            // => @media (max-width: 700px) { ... }
+
+            sm: { max: "425px" },
+            // => @media (max-width: 425px) { ... }
+
+            xs: { max: "375px" },
+            // => @media (max-width: 375px) { ... }
+
+            s: { max: "320px" },
+            // => @media (max-width: 375px) { ... }
+          },
+          extend: {
+            backgroundImage: {
+              "header-bg": "url('../img/header-bg.png')",
+            },
+            colors: {
+              //   button colors
+              maingreen: "#70C174",
+              cardgreen: "#BEF3C0",
+              bggreen: "#EFF7F2",
+              //   main colors
+              bgblack: "#0B0706",
+              mainblack: "#1D2130",
+              pgray: "#525560",
+              bgviolet: "#EBF0F9",
+              bordergray: "#E5E5E5",
+
+              //   statistics colors
+              statgreen: "#BEF3C0",
+              statpurple: "#AC94F1",
+              statmilky: "#FFF0CA",
+              statyellow: "#F9CF64",
+              statpink: "#F38FBF",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <!--navbar  -->
+    <section class="bg-bggreen w-full">
+      <div
+        class="main-container flex items-center py-2 roboto-medium text-base leading-[19px] lg:max-w-[984px] md:max-w-[728px]"
+      >
+        <!-- logo -->
+        <div
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+        >
+          <a href="./index.html">
+            <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- hamburger -->
+        <label class="hamburger-menu hidden hamvisible:flex" for="hamburger">
+          <input type="checkbox" name="hamburger" id="hamburger" />
+        </label>
+        <!-- links -->
+        <nav
+          class="flex items-center gap-8 py-4 px-5 text-pgray ml-auto mr-5 md:gap-4 md:px-0 md:mr-[4.5rem] md:text-sm sm:gap-[2rem] sm:text-lg s:gap-[1rem] s:text-sm"
+        >
+          <a
+            href="./index.html"
+            data-replace="Home"
+            class="active:text-bgblack focus:text-bgblack hover:scale-105 transition duration-300 ease-in-out"
+            ><span>Home</span></a
+          >
+          <a
+            href="./About-us.html"
+            data-replace="About us"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>About us</span></a
+          >
+          <a
+            href="./What-we-do.html"
+            data-replace="What We Do"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>What We Do</span></a
+          >
+          <a
+            href="./Media.html"
+            data-replace="Media"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Media</span></a
+          >
+          <a
+            href="./Contact-us.html"
+            data-replace="Contact"
+            class="focus:text-bgblack hover:scale-105 transition duration-200 ease-in-out"
+            ><span>Contact</span></a
+          >
+        </nav>
+
+        <!-- nav button -->
+        <a href="./Donation.html">
+          <button
+            class="nav-button bg-mainblack text-white rounded py-3 px-8 hover:bg-transparent hover:text-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack hover:scale-105 transition duration-300 ease-in-out xs:text-[12px] xs:p-[8px] s:leading-4 s:px-[10px]"
+          >
+            Donate
+          </button>
+        </a>
+      </div>
+    </section>
+
+    <!-- Header -->
+    <section
+      class="bg-bggreen mb-[96px] py-[96px] md:py-[80px] md:mb-[80px] sm:mb-[60px] sm:py-[60px] xs:py-[40px]"
+    >
+      <main
+        class="main-container flex items-start gap-[96px] lg:max-w-[984px] lg:gap-[50px] md:max-w-[728px] md:flex-col xs:gap-10"
+      >
+        <!-- top row -->
+        <article class="basis-1/2">
+          <!-- section title -->
+          <div
+            class="flex items-center gap-6 mb-8 sm:gap-4 md:mb-5 sm:mb-6 s:gap-[10px]"
+          >
+            <div
+              class="w-[72px] border-t-[2px] border-mainblack sm:w-1/5 xs:w-[50px] s:w-10"
+            ></div>
+            <div
+              class="mr-auto roboto-bold text-base text-mainblack leading-[19px] tracking-[2px] uppercase md:text-sm sm:text-xs s:text-[12px]"
+            >
+              Top news
+            </div>
+          </div>
+          <!-- texts -->
+          <div class="ml-[97px] sm:ml-0">
+            <!-- texts -->
+            <h1
+              class="text-mainblack mb-4 lg:text-[42px] lg:leading-[58px] md:text-[37px] md:leading-[52px] sm:text-[34px] sm:leading-[42px] xs:text-[28px] xs:leading-[38px] s:text-2xl xs:mb-3"
+            >
+              Our goal is to make water available for everyone
+            </h1>
+            <p class="mb-8 text-pgray">
+              Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet.
+              Nunc ut sem vitae risus tristique posuere.
+            </p>
+            <!-- primary button 'Learn more' -->
+            <a href="./Blog-post-and-more.html">
+              <button
+                class="primary-button hover:bg-transparent hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out"
+              >
+                Read more
+              </button>
+            </a>
+          </div>
+        </article>
+        <!-- side list -->
+        <aside
+          class="flex flex-col items-start gap-6 basis-1/2 p-6 pr-[56px] bg-white rounded-xl lg:p-6 md:mx-[96px] sm:mx-0 sm:p-4 sm:gap-5 xs:gap-9"
+        >
+          <!-- side card -->
+          <a href="./Media.html">
+            <div class="flex items-center gap-6 sm:gap-4 xs:flex-col xs:gap-2">
+              <div
+                class="rounded-lg overflow-hidden w-[192px] h-full lg:w-[160px] xs:w-[100%] xs:h-[150px]"
+              >
+                <img
+                  src="./img/goal1.jpg"
+                  alt="image"
+                  class="object-cover object-center w-full"
+                />
+              </div>
+              <div class="flex-1 text-mainblack space-y-2 s:space-y-0">
+                <h4 class="lg:text-lg sm:text-base xs:text-lg s:text-base s:line-clamp-2">
+                  Don’t destroy greenery and don’t spoil scenery.
+                </h4>
+                <p class="text-pgray lg:text-[13px] lg:leading-5 s:text-[10px]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- side card -->
+          <a href="./Media.html">
+            <div class="flex items-center gap-6 sm:gap-4 xs:flex-col xs:gap-2">
+              <div
+                class="rounded-lg overflow-hidden w-[192px] h-full lg:w-[160px] xs:w-[100%] xs:h-[150px]"
+              >
+                <img
+                  src="./img/goal2.jpg"
+                  alt="image"
+                  class="object-cover object-center w-full"
+                />
+              </div>
+              <div class="flex-1 text-mainblack space-y-2 s:space-y-0 s:space-y-0">
+                <h4 class="lg:text-lg sm:text-base xs:text-lg s:text-base s:line-clamp-2">
+                  Why saving wildlife is extremely important
+                </h4>
+                <p class="text-pgray lg:text-[13px] lg:leading-5 s:text-[10px]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim
+                </p>
+              </div>
+            </div>
+          </a>
+          <!-- side card -->
+          <a href="./Media.html">
+            <div class="flex items-center gap-6 sm:gap-4 xs:flex-col xs:gap-2">
+              <div
+                class="rounded-lg overflow-hidden w-[192px] h-full lg:w-[160px] xs:w-[100%] xs:h-[150px]"
+              >
+                <img
+                  src="./img/goal3.jpg"
+                  alt="image"
+                  class="object-cover object-center w-full"
+                />
+              </div>
+              <div class="flex-1 text-mainblack space-y-2 s:space-y-0">
+                <h4 class="lg:text-lg sm:text-base xs:text-lg s:text-base s:line-clamp-2">
+                  Caring for the present is caring for the future
+                </h4>
+                <p class="text-pgray lg:text-[13px] lg:leading-5 s:text-[10px]">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse varius enim
+                </p>
+              </div>
+            </div>
+          </a>
+        </aside>
+      </main>
+    </section>
+
+    <!-- read our news -->
+    <section
+      class="main-container mb-[96px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] sm:mb-[60px]"
+    >
+      <!-- section title (big) -->
+      <div
+        class="flex flex-col ml-auto mr-auto items-center mb-[48px] space-y-4 lg:space-y-2 sm:mb-7 xs:items-start"
+      >
+        <h2
+          class="lg:text-[42px] lg:leading-[58px] md:text-[37px] md:leading-[52px] sm:text-[28px] sm:leading-[38px] xs:text-left s:text-2xl"
+        >
+          Read our Recent News
+        </h2>
+        <p class="text-center text-pgray md:text-sm xs:text-xs xs:text-left s:text-[11px]">
+          Edit this text to make it your own. To edit, simply click directly
+          <br class="xs:hidden"/>
+          on the text to start We are served
+        </p>
+      </div>
+      <!-- news cards -->
+      <div class="flex gap-6 md:grid md:grid-cols-2 md:gap-y-8 xs:gap-x-4 xs:gap-y-8 xs:grid-cols-1">
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards1.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:mx-1"
+            >
+              Don’t destroy greenery and don’t spoil scenery
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:mx-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Blog-post-and-more.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards2.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1"
+            >
+              Is climate change happening faster than expected?
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards3.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1 xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1"
+            >
+              Top 10 facts about wind farms you didn't know
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+        <a href="./Media.html">
+          <div
+            class="basis-1/4 group hover:scale-105 hover:underline hover:underline-offset-2 transition duration-300 ease-in-out"
+          >
+            <div class="overflow-hidden rounded-lg mb-4 sm:mb-2">
+              <img src="./img/newscards4.png" alt="" class="w-full h-full" />
+            </div>
+            <div
+              class="roboto-medium text-mainblack text-xl leading-[30px] mb-2 lg:text-[17px] md:text-[20px] md:leading-6 sm:text-sm sm:mb-1
+              xs:line-clamp-2 xs:text-lg xs:leading-[21px] s:text-base xs:ml-1 "
+            >
+              Our goal is to make water available for everyone
+            </div>
+            <p
+              class="text-pgray lg:text-[12px] lg:leading-5 md:text-sm sm:text-xs sm:line-clamp-2 xs:text-[11px] xs:ml-1"
+            >
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Suspendisse varius enim
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Our Events -->
+    <section class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px]">
+      <article">
+        <!-- section title (big) -->
+        <div
+          class="flex items-center gap-6 mb-[48px] md:mb-8 sm:mb-[30px] xs:mb-6"
+        >
+          <div
+            class="roboto-bold text-[40px] text-mainblack leading-[60px] md:text-[37px] md:leading-[52px] sm:text-[28px] sm:leading-[38px] xs:text-[26px] xs:leading-[26px]"
+          >
+            Other events
+          </div>
+          <div class="flex-1 border-t-[1px] border-bordergray"></div>
+        </div>
+
+        <!-- Event Cards -->
+        <div class="flex lg:flex-col lg:px-[60px] md:px-0 gap-6 s:gap-4">
+          <!-- 23 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                23
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Say no to plastic usage and save the planet
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">  <button
+              class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+            >
+              <img
+                src="./img/eventarrowright.svg"
+                alt="arrow"
+                class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+              />
+            </button> </a>
+          </div>
+          <!-- 25 sep -->
+          <div
+            class="flex gap-6 basis-1/2 pt-8 pr-[48px] pb-10 pl-10 bg-cardgreen rounded-lg text-mainblack sm:p-5 sm:gap-4 s:p-4 s:items-center"
+          >
+            <!-- date -->
+            <div class="roboto-medium">
+              <div
+                class="text-[48px] leading-[58px] sm:leading-[40px] sm:text-[40px] xs:text-[32px] xs:leading-8 s:text-[26px] s:leading-[26px]"
+              >
+                25
+              </div>
+              <div
+                class="uppercase text-base leading-[19px] tracking-[2px] xs:text-xs s:text-[10px]"
+              >
+                SEP
+              </div>
+            </div>
+            <!-- event title -->
+            <div class="flex-1 mt-2 s:mt-0">
+              <!-- event header -->
+              <div
+                class="flex items-center gap-[23px] mb-2 sm:gap-[12px] xs:mb-1"
+              >
+                <div
+                  class="roboto-medium uppercase text-base leading-[19px] tracking-[2px] sm:text-[11px] sm:leading-[12px] xs:text-[9px] s:text-[8px]"
+                >
+                  Next Events
+                </div>
+                <div
+                  class="w-[44px] border-t-[2px] border-mainblack sm:w-[80px] s:w-[43px]"
+                ></div>
+              </div>
+              <!-- big text -->
+              <h3
+                class="sm:text-[21px] sm:leading-[28px] xs:text-[18px] s:leading-[22px] s:text-[15px]"
+              >
+                Weekly cleaning program
+              </h3>
+            </div>
+            <!-- Arrow button -->
+            <a href="./Event-and-more.html">  <button
+              class="size-[56px] mt-8 flex items-center justify-center bg-white rounded-full group hover:bg-mainblack hover:ring-1 hover:ring-inset hover:ring-mainblack transition duration-300 ease-in-out sm:mt-0 sm:mt-auto sm:mb-auto sm:size-10 xs:size-9 s:size-7"
+            >
+              <img
+                src="./img/eventarrowright.svg"
+                alt="arrow"
+                class="group-hover:brightness-0 group-hover:invert xs:size-5 s:size-3"
+              />
+            </button> </a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-bgblack">
+      <article
+        class="main-container flex items-start py-[96px] text-white lg:max-w-[984px] md:max-w-[728px] md:flex-wrap md:justify-between md:gap-[70px] sm:justify-center sm:pb-[146px] s:pb-[123px] s:pt-[80px]"
+      >
+        <!-- logo -->
+        <div class="md:ml-[70px] sm:ml-0 xs:ml-0 s:ml-0">
+          <a href="./index.html">
+            <img src="./img/footerLogo.svg" alt="logo" class="max-w-fit" />
+          </a>
+        </div>
+        <!-- links -->
+        <div
+          class="flex gap-[88px] ml-[120px] mr-[143px] whitespace-nowrap lg:gap-[60px] lg:mx-[70px] sm:mx-0 s:gap-10"
+        >
+          <!-- our team row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Our team</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html">About us</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./About-us.html#ourteam">Team</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./What-we-do.html">What we do</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Contact-us.html">Contact</a>
+            </p>
+          </div>
+          <!-- More row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">More</p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Project-and-more.html">Projects</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Event-and-more.html">Events</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Donation.html">Donate</a>
+            </p>
+            <p class="p-small opacity-[0.78]">
+              <a href="./Blog-post-and-more.html">Blog</a>
+            </p>
+          </div>
+          <!-- Connect row -->
+          <div class="flex flex-col gap-6 md:gap-[14px] items-start s:gap-4">
+            <p class="roboto-bold">Connect</p>
+            <p class="p-small opacity-[0.78]"><a href="#">Facebook</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Instagram</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Twitter</a></p>
+            <p class="p-small opacity-[0.78]"><a href="#">Linkdin </a></p>
+          </div>
+        </div>
+        <!-- form -->
+        <div
+          class="flex flex-col gap-8 w-[544px] md:ml-auto md:mr-auto xs:gap-5"
+        >
+          <label
+            for="email"
+            class="roboto-bold text-[40px] leading-[56px] md:text-center md:leading-[36px] md:text-[32px] xs:text-[26px] xs:leading-[32px]"
+          >
+            Subscribe to get latest updates
+          </label>
+          <!-- form field -->
+          <form class="flex items-center relative z-999">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Your email"
+              class="flex-1 py-[22px] pl-6 pr-[10px] bg-transparent outline-0 ring-[1px] ring-inset ring-bgviolet/30 rounded focus:ring-bgviolet roboto-regular text-base leading-[19px] text-bgviolet/80 placeholder:text-bgviolet/30 placeholder:opacity-80 absolute w-full top-0 left-0 xs:pr-[95px]"
+            />
+            <button
+              class="secondary-button py-[22.5px] hover:bg-bgblack hover:text-white hover:ring-1 hover:ring-inset hover:ring-white transition duration-300 ease-in-out absolute top-0 right-0"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </article>
+    </footer>
+  </body>
+</html>
