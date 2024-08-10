@@ -68,7 +68,7 @@
       >
         <!-- logo -->
         <div
-          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[30%] xs:ml-[27%] s:ml-[70px]"
         >
           <a href="./index.html">
             <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
@@ -317,12 +317,12 @@
     </section>
 
     <!-- projects we have done -->
-    <section id="ourprojects"
+    <section
+      id="ourprojects"
       class="main-container mb-[96px] md:mb-[80px] sm:mb-[60px] xs:mb-[40px]"
     >
       <!-- 3 cards -->
       <div class="flex gap-6 md:flex-col">
-
         <!-- card 1 -->
         <div
           class="basis-1/3 h-[421px] relative bg-[url('./img/projectcard1.png')] bg-cover bg-no-repeat bg-center rounded-xl overflow-hidden lg:h-[381px] md:basis-auto md:h-[281px] sm:h-[361px] xs:h-[215px] s:h-[247px]"
@@ -339,7 +339,7 @@
               <h3
                 class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3 s:mb-[10px]"
               >
-                Mission 40K: Tree plantation 
+                Mission 40K: Tree plantation
               </h3>
               <p
                 class="lg:text-sm lg:leading-6 md:text-[16px] md:text-center sm:text-sm xs:text-xs"
@@ -413,7 +413,7 @@
             <!-- texts -->
             <div class="text-white">
               <h3
-                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3  s:mb-[10px]"
+                class="mb-4 lg:text-2xl lg:leading-[38px] md:text-[28px] md:text-center sm:text-[22px] sm:line-clamp-2 xs:text-[20px] xs:leading-[22px] xs:mb-3 s:mb-[10px]"
               >
                 Wildlife safety program 2021
               </h3>
@@ -436,7 +436,6 @@
             </div>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -449,7 +448,7 @@
       ></div>
       <article class="z-10 flex flex-col items-center">
         <h2
-          class="text-white text-center mb-8 lg:text-[38px] lg:leading-[42px] md:text-[32px] sm:text-2xl xs:text-[20px] xs:leading-[22px] xs:mb-6 s:text-xl  s:mb-[20px]"
+          class="text-white text-center mb-8 lg:text-[38px] lg:leading-[42px] md:text-[32px] sm:text-2xl xs:text-[20px] xs:leading-[22px] xs:mb-6 s:text-xl s:mb-[20px]"
         >
           You can contribute to make the environment greener!
         </h2>
@@ -473,46 +472,104 @@
     </section>
 
     <!-- POP-UP window (form) -->
-    <section class="main-container mb-[96px]  lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:max-w-[728px sm:mb-[60px]">
+    <section
+      class="main-container mb-[96px] lg:max-w-[984px] md:max-w-[728px] md:mb-[80px] md:max-w-[728px sm:mb-[60px]"
+    >
       <!-- Pop up message, which to be displayed on the screen (or whereever it is supposed to appear as soon as user reaches the bottom  -->
-      <article class=" w-[640px] relative p-[48px] bg-white text-mainblack rounded-lg ml-auto mr-auto md:px-0 sm:w-full sm:flex sm:flex-col xs:py-[55px]"> 
-          <div class="roboto-bold text-[40px] leading-[56px] mb-4 lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] md:text-center sm:text-3xl xs:text-[28px] s:text-2xl sm:mb-3 xs:mb-2">
-              Join as a volunteer
+      <article
+        class="w-[640px] relative p-[48px] bg-white text-mainblack rounded-lg ml-auto mr-auto md:px-0 sm:w-full sm:flex sm:flex-col xs:py-[55px]"
+      >
+        <div
+          class="roboto-bold text-[40px] leading-[56px] mb-4 lg:text-[40px] lg:leading-[58px] md:text-[32px] md:leading-[42px] md:text-center sm:text-3xl xs:text-[28px] s:text-2xl sm:mb-3 xs:mb-2"
+        >
+          Join as a volunteer
+        </div>
+        <p
+          class="p-small text-pgray mb-8 sm:text-center xs:text-xs xs:mb-[48px]"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius
+          enim in eros elementum tristique.
+        </p>
+
+        <button
+          class="absolute top-6 right-6 size-8 bg-mainblack rounded grid place-items-center hover:scale-110 transition ease-in out sm:top-2 sm:right-2 sm:size-6"
+        >
+          <img
+            src="./img/Cross.svg"
+            alt="button"
+            class="object-center object-cover"
+          />
+        </button>
+
+        <!-- form -->
+        <form
+          action="submit"
+          class="flex flex-wrap gap-8 select-text mb-8"
+          autocomplete="off"
+        >
+          <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray">
+            <label
+              for="firstname"
+              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+              >First Name</label
+            >
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm"
+            />
           </div>
-          <p class="p-small text-pgray mb-8 sm:text-center xs:text-xs xs:mb-[48px]"> 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspen varius enim in eros elementum tristique. 
-          </p>
+          <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray">
+            <label
+              for="lastname"
+              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+              >Last Name</label
+            >
+            <input
+              type="text"
+              name="lastname"
+              id="lastname"
+              class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm"
+            />
+          </div>
+          <div
+            class="flex flex-col basis-full border-b-[1px] border-b-bordergray"
+          >
+            <label
+              for="email"
+              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+              >Email Id</label
+            >
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm"
+            />
+          </div>
+          <div class="flex flex-col basis-full">
+            <label
+              for="message"
+              class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs"
+              >Message</label
+            >
+            <textarea
+              name="message"
+              id="message"
+              class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 sm:text-sm rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none"
+              placeholder="Type your Messege"
+            ></textarea>
+          </div>
+        </form>
 
-          <button class="absolute top-6 right-6 size-8 bg-mainblack rounded grid place-items-center hover:scale-110 transition ease-in out sm:top-2 sm:right-2 sm:size-6 ">
-              <img src="./img/Cross.svg" alt="button" class="object-center object-cover">
-          </button>
-
-          <!-- form -->
-          <form action="submit" class="flex flex-wrap gap-8 select-text mb-8" autocomplete="off">
-              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
-                  <label for="firstname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">First Name</label> 
-                  <input type="text" name="firstname" id="firstname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
-              </div>
-              <div class="flex flex-col flex-1 border-b-[1px] border-b-bordergray" >
-                  <label for="lastname" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Last Name</label> 
-                  <input type="text" name="lastname" id="lastname" class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
-              </div>
-              <div class="flex flex-col basis-full border-b-[1px] border-b-bordergray" >
-                  <label for="email" class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs ">Email Id</label> 
-                  <input type="email" name="email" id="email" class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0 sm:text-sm">
-              </div>
-              <div class="flex flex-col basis-full" >
-                  <label for="message" class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs ">Message</label> 
-                  <textarea name="message" id="message" class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 sm:text-sm 
-                  rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none" placeholder="Type your Messege"></textarea>
-              </div>
-          </form>
-
-          <!-- submit -->
-          <button type="submit" class="primary-button hover:bg-white hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out w-fit s:ml-auto s:mr-auto">
-              Send message
-          </button>
-          
+        <!-- submit -->
+        <button
+          type="submit"
+          class="primary-button hover:bg-white hover:text-maingreen hover:ring-1 hover:ring-inset hover:ring-maingreen hover:scale-105 transition duration-300 ease-in-out w-fit s:ml-auto s:mr-auto"
+        >
+          Send message
+        </button>
       </article>
     </section>
 

@@ -20,7 +20,7 @@
             md: { max: "768px" },
             // => @media (max-width: 768px) { ... }
 
-             hamvisible: { max: "700px" },
+            hamvisible: { max: "700px" },
             // => @media (max-width: 650px) { ... }
 
             sm: { max: "425px" },
@@ -68,7 +68,7 @@
       >
         <!-- logo -->
         <div
-          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[120px] xs:ml-[106px] s:ml-[70px]"
+          class="mr-auto cursor-pointer hamvisible:ml-[33%] sm:ml-[30%] xs:ml-[27%] s:ml-[70px]"
         >
           <a href="./index.html">
             <img src="./img/Logo.svg" alt="logo" class="max-w-fit" />
@@ -258,75 +258,76 @@
       <form
         action="submit"
         class="w-full grid grid-cols-2 gap-8 select-text mb-8 sm:flex sm:flex-col"
-        autocomplete="off">
-          <div class="flex flex-col border-b-[1px] border-b-bordergray">
-            <label
-              for="firstname"
-              class="roboto-bold text-mainblack/60 leading-[19px] text-xs"
-              >First Name</label
-            >
-            <input
-              type="text"
-              name="firstname"
-              id="firstname"
-              value="John"
-              class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
-            />
-          </div>
-          <div class="flex flex-col border-b-[1px] border-b-bordergray">
-            <label
-              for="lastname"
-              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
-              >Last Name</label
-            >
-            <input
-              type="text"
-              name="lastname"
-              id="lastname"
-              value="Doe"
-              class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
-            />
-          </div>
-          <div class="flex flex-col border-b-[1px] border-b-bordergray">
-            <label
-              for="email"
-              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
-              >Email Id</label
-            >
-            <input
-              type="email"
-              name="email"
-              id="email"
-              value="johndoe@gmail.com"
-              class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
-            />
-          </div>
-          <div class="flex flex-col border-b-[1px] border-b-bordergray">
-            <label
-              for="subject"
-              class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
-              >Subject</label
-            >
-            <input
-              type="email"
-              name="subject"
-              id="subject"
-              class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
-            />
-          </div>
-          <div class="flex flex-col col-span-2">
-            <label
-              for="message"
-              class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs"
-              >Message</label
-            >
-            <textarea
-              name="message"
-              id="message"
-              class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none"
-              placeholder="Type your Messege"
-            ></textarea>
-          </div>
+        autocomplete="off"
+      >
+        <div class="flex flex-col border-b-[1px] border-b-bordergray">
+          <label
+            for="firstname"
+            class="roboto-bold text-mainblack/60 leading-[19px] text-xs"
+            >First Name</label
+          >
+          <input
+            type="text"
+            name="firstname"
+            id="firstname"
+            value="John"
+            class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+          />
+        </div>
+        <div class="flex flex-col border-b-[1px] border-b-bordergray">
+          <label
+            for="lastname"
+            class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+            >Last Name</label
+          >
+          <input
+            type="text"
+            name="lastname"
+            id="lastname"
+            value="Doe"
+            class="roboto-regular text-base leading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+          />
+        </div>
+        <div class="flex flex-col border-b-[1px] border-b-bordergray">
+          <label
+            for="email"
+            class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+            >Email Id</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value="johndoe@gmail.com"
+            class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+          />
+        </div>
+        <div class="flex flex-col border-b-[1px] border-b-bordergray">
+          <label
+            for="subject"
+            class="roboto-bold text-mainblack leading-[19px] opacity-60 text-xs"
+            >Subject</label
+          >
+          <input
+            type="email"
+            name="subject"
+            id="subject"
+            class="roboto-regular text-base tleading-[26px] text-mainblack caret-mainblack/60 px-[7px] pt-[14px] border-0 outline-0"
+          />
+        </div>
+        <div class="flex flex-col col-span-2">
+          <label
+            for="message"
+            class="roboto-bold text-mainblack leading-[19px] mb-1 opacity-60 text-xs"
+            >Message</label
+          >
+          <textarea
+            name="message"
+            id="message"
+            class="roboto-regular text-base leading-[26px] text-mainblack placeholder:text-mainblack/30 caret-mainblack/60 p-5 rounded border-[1px] border-bordergray outline-0 h-[156px] resize-none"
+            placeholder="Type your Messege"
+          ></textarea>
+        </div>
       </form>
       <!-- submit -->
       <button
